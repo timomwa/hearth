@@ -1,0 +1,630 @@
+/*
+* Alama Creative Ltd
+* Author, Eric K. Njoroge
+* www.alamacreative.com
+*/
+  
+/*Reset
+------------------------------------------------------------ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+blockquote, q {
+	quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a {
+	text-decoration:none;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: color 0.4s ease-in;
+	transition: color 0.4s ease-in;
+}
+a img {
+	border:none;
+}
+img {
+	max-width:100%;
+}
+ @font-face {
+font-weight: normal;
+font-style: normal;
+font-family: 'Avant Grade Book BT';
+src: local('Avant Grade Book BT'), url('../fonts/Avgardn.ttf') format('truetype');
+}
+ @font-face {
+font-weight: normal;
+font-style: normal;
+font-family: 'AlexandriaFLF';
+src: local('AlexandriaFLF'), url('../fonts/AlexandriaFLF.ttf') format('truetype');
+}
+body {
+	background-color:#fff;
+	color:#303030;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:0.9em;
+	text-align:left;
+	line-height:30px;
+}
+/*start search*/
+.sb-search {
+	position: absolute;
+	top: 2px;
+	right:0px;
+	width: 0%;
+	min-width: 45px;
+	height: 45px;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+.sb-search-input {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	border: none;
+	outline: none;
+	background: #252525;
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	z-index: 10;
+	padding: 5px 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+}
+.sb-search-input::-webkit-input-placeholder {
+ color: #ffffff;
+}
+.sb-search-input:-moz-placeholder {
+ color: #ffffff;
+}
+.sb-search-input::-moz-placeholder {
+ color: #efb480;
+}
+.sb-search-input:-ms-input-placeholder {
+ color: #ffffff;
+}
+.sb-icon-search, .sb-search-submit {
+	width: 45px;
+	height: 45px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 45px;
+	text-align: center;
+	cursor: pointer;
+}
+.sb-search-submit {
+	background: #fff; /* IE needs this */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+	filter: alpha(opacity=0); /* IE 5-7 */
+	opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: -1;
+	-webkit-appearance: none;
+}
+.sb-icon-search {
+	color: #fff;
+	background: #320E04 url('../images/search.png') no-repeat 14px 14px;
+	z-index: 90;
+}
+/* Open state */
+.sb-search.sb-search-open, .no-js .sb-search {
+	width: 100%;
+}
+.sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search {
+	background: #1E0601 url('../images/search.png') no-repeat 14px 14px;
+	color: #fff;
+	z-index: 11;
+}
+.sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}
+/*start wrap  */
+.wrap {
+	margin:0 auto;
+	width:70%;
+}
+/*start header */
+.header {
+	border-top:4px solid #320E04;
+}
+.logo {
+	float: left;
+}
+.h_right {
+	position: relative;
+	float: right;
+	margin-top:3%;
+}
+/*  Styles Za Content
+------------------------------------------------------------ */
+.intro {
+	width:80%;
+	overflow: hidden;
+	margin:0 auto;
+	padding:120px 0;
+}
+.intro h1 {
+	text-align:center;
+	font-size:48px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	line-height:60px;
+	color:#333;
+	padding:0 0 10px 0;
+}
+/*  Styles Za Services
+------------------------------------------------------------ */
+.container {
+	width:100%;
+	overflow: hidden;
+	height:auto;
+}
+/*  Styles Za Fabric part
+------------------------------------------------------------ */
+.fabric {
+	width:60%;
+	overflow: hidden;
+	height:200px;
+	background: #320E04;
+	float:left;
+}
+.fabric h1 {
+	text-align:left;
+	font-size:36px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	line-height:36px;
+	color:#fff;
+	padding:50px 40px 0 40px;
+}
+.fabric p {
+	text-align:left;
+	color:#fff;
+	padding:0 40px;
+	font-size:12px;
+}
+#fabric {
+	width:40%;
+	overflow: hidden;
+	height:auto;
+	float:left;
+}
+#fabric img {
+	width:100px;
+	float:left;
+	margin:0;
+}
+/*  Styles Za footer
+------------------------------------------------------------ */
+footer {
+	width:100%;
+	overflow: hidden;
+}
+.endnav {
+	float:left;
+	width:50%;
+	margin:40px 0 0 10px;
+}
+.endnav li {
+	display: inline-block;
+	margin:0 10px;
+}
+.endnav a {
+	color:#000;
+	text-transform:uppercase;
+	font-size:10px;
+}
+.endnav a:hover {
+	color:#ff5500;
+}
+#social {
+	padding:20px 0;
+	max-width:320px;
+	margin:0 30px;
+	overflow: hidden;
+	float:right;
+}
+#social a img {
+	margin:1px;
+	transition:0.5s ease-in;
+}
+#social a img:hover {
+	-webkit-transform: translate(0px, -5px);
+	-moz-transform: translate(0px, -5px);
+	-o-transform: translate(0px, -5px);
+	-ms-transform: translate(0px, -5px);
+	transform: translate(0px, -5px);
+}
+#final {
+	width:100%;
+	overflow: hidden;
+	border-top:1px solid #ddd;
+	text-align:center;
+}
+#final p {
+	margin:20px 0;
+	font-size:11px;
+}
+
+/*  Styles Za about page
+------------------------------------------------------------ */
+#about {
+	float:left;
+	width:50%;
+	margin:0;
+	background-color:#320E04;
+}
+
+#about h1 {
+	text-align:left;
+	font-size:24px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	line-height:36px;
+	color:#fff;
+	padding:50px 40px 0 40px;
+}
+
+#about p {
+	text-align:left;
+	padding:0 40px 50px 40px;
+	font-size:12px;
+	color:#fff;
+}
+
+.about {
+	float:left;
+	width:50%;
+	margin:0;
+}
+
+.about img{
+	width:100%;
+	float:left;
+}
+
+
+.about h1 {
+	text-align:left;
+	font-size:36px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	line-height:36px;
+	color:#320E04;
+	padding:30px 40px 0 40px;
+}
+
+.about h2 {
+	text-align:left;
+	font-size:24px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	color:#000;
+	padding:10px 40px 0 40px;
+}
+.about p {
+	text-align:left;
+	padding:0 40px;
+	font-size:12px;
+}
+
+/*  Styles Za contact page
+------------------------------------------------------------ */
+.contact {
+	margin-top:160px;
+	background-color: rgba(0, 0, 0, 1);
+	height: 900px;
+	background: url(../images/contact.jpg) 50% 0 no-repeat ;
+	background-position:center;
+		width: 100%;
+
+}
+
+#contact {
+	width:400px;
+	height: 900px;
+	margin:0;
+	background-color:rgba(50, 14, 4, 0.6);
+	float:left;
+}
+
+
+#contact h1 {
+	text-align:left;
+	font-size:28px;
+	font-weight:normal;
+	font-family:'AlexandriaFLF', 'Rockwell', cursive;
+	line-height:36px;
+	color:#fff;
+	padding:30px 30px;
+}
+
+#contact p {
+	text-align:left;
+	padding:10px 30px;
+	font-size:12px;
+	color:#fff;
+}
+
+#contact span{
+font-weight:bold;
+color:#fff;
+}
+
+ #contactform {
+width: 350px;
+margin:10px auto;
+padding-top:15px;
+overflow: hidden;
+}
+
+#contactform ol {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#contactform li {
+	margin:0;
+	padding:0;
+	background:none;
+	border:none;
+	display:block;
+	clear:both;
+
+}
+
+#contactform label {
+	margin:0;
+	width:150px;
+	display:block;
+	padding:10px 0;
+	color:#fff;
+	float:left;
+}
+
+#contactform label span {
+	color:#fff;
+}
+#contactform input.text {
+	width:350px;
+	border:1px solid #e8e8e8;
+	margin:2px 0;
+	padding:5px 2px;
+	height:16px;
+	background:#f8f8f8;
+	float:left;
+}
+#contactform textarea {
+	width:490px;
+	height: 250px;
+	border:1px solid #e8e8e8;
+	margin:2px 0;
+	padding:2px;
+	background:#f8f8f8;
+	float:left;
+}
+#contactform li.buttons input {
+	padding:3px 0 3px 0px;
+	border:0;
+	margin-top:7px;
+}
+
+
+
+/***** Media Quries *****/
+@media only screen and (max-width: 1366px) {
+ .wrap {
+ width:95%;
+}
+ .h_right h4 {
+ text-align: left;
+}
+}
+@media only screen and (max-width: 1280px) {
+ .wrap {
+ width:95%;
+}
+}
+@media only screen and (max-width: 1024px) {
+ .wrap {
+ width:95%;
+}
+ .intro {
+ width:100%;
+ overflow: hidden;
+ margin:0 auto;
+ padding:50px 0;
+}
+ .fabric {
+height:300px;
+}
+}
+@media only screen and (max-width: 800px) {
+ .wrap {
+ width:95%;
+}
+ .content {
+ width: 100%;
+ float: none;
+}
+}
+@media only screen and (max-width: 768px) {
+ .wrap {
+ width:95%;
+}
+ .h_right {
+ position: relative;
+ float: none;
+ margin-bottom: 80px;
+}
+ .flexy-menu i {
+ display: none !important;
+}
+ .flexy-menu li {
+ border: 1px solid rgb(236, 236, 236);
+}
+ .logo {
+ float: none;
+ width: 40%;
+}
+ .intro {
+ width:100%;
+ overflow: hidden;
+ margin:0 auto;
+ padding:50px 0;
+}
+ .fabric {
+width:100%;
+height:200px;
+}
+ #fabric {
+width:100%;
+}
+
+.about img{
+	height:500px;
+
+}
+}
+@media only screen and (max-width: 640px) {
+ .wrap {
+ width:95%;
+}
+ .logo {
+ float: none;
+ width: 35%;
+}
+ .intro {
+ width:100%;
+ overflow: hidden;
+ margin:0 auto;
+ padding:50px 0;
+}
+ .fabric {
+width:100%;
+height:200px;
+}
+ #fabric {
+width:100%;
+}
+
+#about {
+	width:100%;
+
+}
+
+.about {
+	width:100%;
+
+}
+}
+@media only screen and (max-width: 480px) {
+ .wrap {
+ width:95%;
+}
+ .logo {
+ float: none;
+ width: 20%;
+}
+ .intro {
+ width:100%;
+ overflow: hidden;
+ margin:0 auto;
+ padding:50px 0;
+}
+ .fabric {
+width:100%;
+height:300px;
+}
+ #fabric {
+width:80%;
+margin:0 10%;
+}
+ .endnav {
+width:100%;
+text-align:center;
+}
+ #social {
+max-width:250px;
+margin:0 25%;
+}
+
+#about {
+	width:100%;
+
+}
+
+.about {
+	width:100%;
+
+}
+}
+@media only screen and (max-width: 320px) {
+ .wrap {
+ width:95%;
+}
+ .intro {
+ width:100%;
+ overflow: hidden;
+ margin:0 auto;
+ padding:50px 0;
+}
+ .fabric {
+width:100%;
+height:300px;
+}
+ #fabric {
+width:100%;
+}
+ .endnav {
+width:100%;
+text-align:center;
+}
+ #social {
+max-width:250px;
+}
+
+#about {
+	width:100%;
+
+}
+
+.about {
+	width:100%;
+
+}
+}
