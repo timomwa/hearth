@@ -25,7 +25,6 @@ body {
     list-style-position: outside;
     width: 100%;
     background-color:#f8f7f7; 
-    
     letter-spacing:normal;
 	line-height:1.8em;
 	list-style-position: outside;
@@ -38,9 +37,9 @@ body {
 	font-weight:normal;
 }
 span{
-font-size:16px;
+	font-size:16px;
 	font-weight:bold;
-padding:0px 0px 0px 5px;
+	padding:0px 0px 0px 5px;
 }
 
 a:link, a:hover, a:visited {
@@ -57,11 +56,20 @@ a {
 
 
 #editorSpan {
-	height: 17px;
-	width: 400px;
-	/* border: 1px solid #737CA1;
-	background-color: #E3E4FA; */
-	padding: 2px 2px 0px 2px;
+font-family:"Century Gothic", Arial, Helvetica, sans-serif !important;
+	height: 17px !important;
+	width: 75% !important;
+	border: 1px solid #737CA1 !important;
+	background-color: #E3E4FA !important; 
+	padding: 2px 2px 0px 2px !important;
+	line-height:9px !important;
+	/*margin:3% 3% 1% 1% !important;*/
+	float: right;
+	clear: both;
+	
+}
+#editorSpan img{
+	width: 27px !important;
 }
 
 .oiditorbutton {
@@ -77,11 +85,18 @@ a {
 }
 
 .puthere { 
-	padding: 0px;
-	font-size: 10px;
-	float: right;
-	color: #2B3856;
-	/*border: 1px solid red;*/
+	margin: 0px !important;
+	padding: 0px !important;
+	display:inline-block !important;
+	height: 15px !important;
+	color: #2B3856 !important;
+	float:right !important;
+	/*position: relative !important;*/
+	font-size: 11px !important;
+	/*border: 1px solid red !important;*/
+	text-align: right;
+	/*line-height:15px !important;*/
+	width: 65% !important;
 }
 
 .oismallLinks {

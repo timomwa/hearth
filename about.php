@@ -117,7 +117,6 @@ License : General License 2014
 			CMS::getContent("first_line",false,null);
 	?>
 <!--We have a passion for Interior Design--></h1>
-<h1> Lorem ipsum dolor sit amet et sapien sed elementum</h1>
 
 </section>
 

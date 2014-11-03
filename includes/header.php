@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <?php 
-error_reporting(0);
+//error_reporting(0);
 $current_uri = $_SERVER['REQUEST_URI'];
 	
 $cs = explode("/", $current_uri);

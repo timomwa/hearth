@@ -21,7 +21,7 @@
 */
 class Security{
 
-	public static $PASSWORD_DIGEST = "38917eec9d7890c26ff5d0f2fc4d5088";
+	public static $PASSWORD_DIGEST = "63a9f0ea7bb98050796b649e85481845";//"38917eec9d7890c26ff5d0f2fc4d5088";
 	public static $USERNAME_DIGEST = "63a9f0ea7bb98050796b649e85481845";
 	public static $ADMIN_SESSION_ID = "aOeDmS12";
 
@@ -112,8 +112,12 @@ class Security{
 
 			echo "<div id='editorSpan' >";
 			echo 	"<img alt='Edit Content' class='oiditorbutton oipointers' src=\"images/edit.png\" onclick=\"OI.showEditor(this,'".$curPage."')\"/>";
-			echo     "<div class='puthere' > Welcome ".(isset($_SESSION['userName'])? $_SESSION['userName'] : "Admin")." | <a class='oismallLinks'  href='admin.php' > Back </a> | <a class='oismallLinks'  href='javascript:void(0)' onclick='OI.logout()'>Logout</a> </div>";
+			echo     "<div class='puthere' >";
+			echo           " Welcome ".(isset($_SESSION['userName'])? $_SESSION['userName'] : "Admin")." | <a class='oismallLinks'  href='admin.php' > Back </a> | <a class='oismallLinks'  href='javascript:void(0)' onclick='OI.logout()'>Logout</a> ";
+			echo     "</div>";
+		//	echo "<div style='clear: right; height: 0; margin: 0; padding: 0'></div>";
 			echo "</div>";
+			echo "<div style='clear: both; height: 0; margin: 0; padding: 0'></div>";
 			/* echo "<div id='editorSpan' ><img alt='Edit Content' class='oiditorbutton oipointers' src=\"images/edit.png\" onclick=\"OI.showEditor(this,'".$curPage."')\"/>";
 			 echo " <span style='font-size: 10px; float: right; color: #2B3856'> Welcome Admin | <a class='oismallLinks'  href='javascript:void(0)' onclick='OI.logout()'>Logout</a> </div></span>";
 			*/
